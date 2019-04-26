@@ -56,8 +56,8 @@ namespace Microsoft.eShopWeb.Web
                 c.UseInMemoryDatabase("Catalog"));
 
             // Add Identity DbContext
-            services.AddDbContext<AppIdentityDbContext>(options =>
-                options.UseInMemoryDatabase("Identity"));
+            services.AddDbContext<AppIdentityDbContext>(identity =>
+                identity.UseInMemoryDatabase("Identity"));
 
             ConfigureServices(services);
         }
